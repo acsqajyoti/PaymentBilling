@@ -1,0 +1,92 @@
+VPN Id credentials:
+
+8.2.6 Splunk GUI :
+http://192.168.0.109:8000
+admin/Q1labs@123
+
+Splunk CLI access via putty
+192.168.0.109 ---> Splunk version 8.2.5
+192.168.0.111 ---> Splunk version 8.1.9
+splunk/Q1labs
+-----------------------------
+To validate the app with appinspect
+https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/useappinspectapi/
+
+Splunk credentials: 
+UN/PW: qaaujas/*S....
+------------------------------
+Proxy Server details for UI - Configuration tab
+proxy ip ->192.168.0.85
+port ->3128
+proxy type ->http
+
+Proxy details for PuTTY
+192.168.0.85
+UN: ubuntu
+PW: Q1labs
+--------------------
+Search tab
+index="umbrella_dns" OR "umbrella_proxy" OR "umbrella_firewall" OR "umbrella_audit"
+----------------------------
+[5:16 PM] S Jabez Daniel
+aws s3 ls s3://cisco-umbrella-aujas-new/auditlogs/
+PRE 2021-10-13/
+PRE 2021-11-03/
+PRE 2021-11-05/
+PRE 2021-11-08/
+PRE 2022-02-17/
+PRE 2022-03-08/
+PRE 2022-04-18/
+PRE 2022-05-15/
+
+To download the log - to check for errors and exceptions 
+/opt/splunk/var/log/splunk/ta_cisco_cloud_security_umbrella_addon_cisco_cloud_security_umbrella_addon.log
+
+-------------------------------------------
+Add-on Configuration page
+-------------------------------------
+Aujas Managed s3 Buckets
+Bucket Name     : cisco-umbrella-aujas-new
+Region Name     : us-west-1
+Endpoint URL     : s3.amazonaws.com
+Indexer               :umbrella
+Access Key ID    : AKIAJVT4LV2YWXM7AJCA
+Secret Key           : 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
+Directory Prefix : 
+dnslogs/
+proxylogs/
+firewalllogs/
+auditlogs/
+------------------------------------------
+URL for Splunkbase
+https://splunkbase.splunk.com/app/5558/
+--------------
+Cisco API Configurations
+Cisco Investigate
+URL : https://investigate.api.umbrella.com
+token : 5d29e8f0-d324-4b39-a09c-350133f67b5c
+indexer : cloudlock
+---------------------------------------------
+Cisco Destination Lists
+URL: https://management.api.umbrella.com/v1/organizations
+token : OTJlYzY4NzM2NjQ1NGFiNjlkMTVmNjJiNjMzZDY4YmI6YzQwODM0MWMwYzZlNGVmZmExZjhhZjgzOTE5YTcyODEK
+organisationId: 2387558
+--------------------------------------------------------------------------------------------------------------
+Cisco CloudLock
+URL : https://api-app.cloudlock.com/api/v2
+token : 3cc65a6d-6e08-4730-8692-97f58f38128c
+indexer : cloudlock
+-------------------------------------------
+Cisco Managed s3 Bucket
+Bucket Name    : cisco-managed-us-west-1
+Region Name    : us-west-1
+Endpoint URL     : s3.amazonaws.com
+Indexer               :umbrella
+Access Key ID    : AKIAYQFBOXTGWF3TZB52
+Secret Key         : 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
+
+Directory Prefix :
+2506666_2db1c6851ddf7c067186521c37fdab749aed6085/dnslogs
+2506666_2db1c6851ddf7c067186521c37fdab749aed6085/firewalllogs
+2506666_2db1c6851ddf7c067186521c37fdab749aed6085/proxylogs
+--------------------------------------------------------------------
